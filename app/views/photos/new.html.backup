@@ -1,14 +1,12 @@
 .container-correct-offset{:style => "\n    height: 90px;\n"}
 .container
-	%legend Add New Photo
-	= form_for @new_photo do |f|
-		%label Photo Name
+	%h1 Add New Photo
+	=form_for @new_photo do |f|
+		= f.label :name
 		= f.text_field :name
 		%br
-		%label Description
+		= f.label :description
 		= f.text_field :description
 		%br
-		%label Upload Photo
 		= f.file_field :photo_image
-		%p
 		= f.submit "Add Photo"

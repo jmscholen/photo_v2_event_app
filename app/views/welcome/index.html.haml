@@ -1,0 +1,37 @@
+/Carousel
+#myCarousel.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+    %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+    %li.active{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+  .carousel-inner
+    .item
+      %img{:alt => "First slide", :src => "http://www.elliottlemenager.com/wp-content/uploads/2011/04/GW_beer9683-900x500.jpg"}
+        .container
+          .carousel-caption
+            %h1 Looking For Cool Photo's?
+            %p Find the best Pics the internets have to offer, Comment it, Tag it and Buy it. Help a photographer make some moola!
+            %p
+              %a.btn.btn-lg.btn-primary{:href => "/users/new", :role => "button"} Sign Up As A Buyer
+    .item
+      %img{:alt => "Second slide", :src => "http://i42.tinypic.com/2jcfpdt.jpg"}
+        .container
+          .carousel-caption
+            %h1 Are You A Photographer In Need of Cash?
+            %p Upload Your Best Work. Comment and Tag it. That's it. People will find your work and Pay for it.
+            %p
+              %a.btn.btn-lg.btn-primary{:href => "/users/new", :role => "button"} Sign Up As A Photographer
+    .item.active
+      %img{:alt => "Third slide", :src => "http://www.tartanweek.com/pages/wp-content/uploads/2012/09/battlefield.band_.ny_.outreach.session.bw_-900x500.jpg"}
+        .container
+          .carousel-caption
+            %h1 Upload, Comment, and Tag. That's it.
+            %p Need Something to do? Nothing simplier than showing off your stuff and talking about it.
+            %p 
+              %a.btn.btn-lg.btn-primary{:href => "/photos", :role => "button"} Browse gallery
+  %a.left.carousel-control{"data-slide" => "prev", :href => "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", :href => "#myCarousel"}
+    %span.glyphicon.glyphicon-chevron-right
+/ /.carousel

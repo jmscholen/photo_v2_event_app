@@ -13,4 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+$container-correct-offset{
+	height: 90px;
+}
+
 @import "bootstrap";
+@import "bootstrap-responsive";
+
+

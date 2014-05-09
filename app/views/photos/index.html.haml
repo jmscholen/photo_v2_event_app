@@ -1,10 +1,15 @@
+.container-correct-offset{:style => "\n    height: 90px;\n"}
 .container
-	- @photos.each do |t|
-		= image_tag t.photo_image.url
-		%br
-		= t.name
-		%br
-		= t.description
-		%br	
-		= link_to "Show Item", photo_path(t), method: :get	
-		%br
+	.row
+		- @photos.each do |t|
+			.col-md-4 
+				%br
+				= image_tag t.photo_image.url
+				%br
+				= t.name
+				%br
+				= t.description
+				%br
+				= link_to "Show Item", photo_path(t), method: :get	
+				%br
+	

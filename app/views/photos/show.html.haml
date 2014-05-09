@@ -1,26 +1,29 @@
-%h1 Photo Item 
-= image_tag @photo.photo_image.url
-%br
-= label_tag "Name:"
-= @photo.name
-%br
-= label_tag "Description:"
-= @photo.description
-%br
+.container-correct-offset{:style => "\n    height: 90px;\n"}
+.container
 
-= label_tag "Add Comment:"
-= form_for @new_comment do |ff|
-	= ff.hidden_field :photo_id, value: @photo.id
-	= ff.text_field :content
+	%h1 Photo Item 
+	= image_tag @photo.photo_image.url
+	%br
+	= label_tag "Name:"
+	= @photo.name
+	%br
+	= label_tag "Description:"
+	= @photo.description
+	%br
 
-	= ff.submit "Add"
+	= label_tag "Add Comment:"
+	= form_for @new_comment do |ff|
+		= ff.hidden_field :photo_id, value: @photo.id
+		= ff.text_field :content
 
-= label_tag "Add Tag:"	
-= form_for @new_tag do |tt|
-	= hidden_field_tag :photo_id, @photo.id
-	= tt.text_field :tag_name
+		= ff.submit "Add"
 
-	= tt.submit "Add"
+	= label_tag "Add Tag:"	
+	= form_for @new_tag do |tt|
+		= hidden_field_tag :photo_id, @photo.id
+		= tt.text_field :tag_name
+
+		= tt.submit "Add"
 
 .container
 	%h2 Existing Comments and Tags:
