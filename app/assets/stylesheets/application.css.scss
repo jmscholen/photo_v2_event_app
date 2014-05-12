@@ -12,13 +12,16 @@
  *
  *= require_tree .
  *= require_self
+ *= require_custom
  */
 
-$container-correct-offset{
-	height: 90px;
-}
+
 
 @import "bootstrap";
 @import "bootstrap-responsive";
 
 
+
+.banana {
+	height: 90px;
+}
